@@ -39,7 +39,7 @@ import {
   GlassMemoryPanel,
   GlassCommandCenter,
   GlassKnowledgeGraph
-} from "frosted-ui";
+} from "frosted-ui-components";
 
 type ComponentCategory = "navigation" | "sheets" | "floating" | "agents";
 
@@ -131,7 +131,7 @@ export default function App() {
     const commonProps = `variant="${variant}" glow={${glow}}`;
     switch (selectedComponent) {
       case "floating-island-bar":
-        return `import { FloatingIslandBar } from "frosted-ui";\n\n` +
+        return `import { FloatingIslandBar } from "frosted-ui-components";\n\n` +
                `<FloatingIslandBar\n` +
                `  items={navItems} // NavItem[]\n` +
                `  centerAction={{\n` +
@@ -142,7 +142,7 @@ export default function App() {
                `  ${commonProps}\n` +
                `/>`;
       case "pill-bar":
-        return `import { PillBar } from "frosted-ui";\n\n` +
+        return `import { PillBar } from "frosted-ui-components";\n\n` +
                `<PillBar\n` +
                `  items={navItems}\n` +
                `  showLabels={${deviceMode === "desktop"}}\n` +
@@ -150,35 +150,35 @@ export default function App() {
                `  ${commonProps}\n` +
                `/>`;
       case "pebble-bar":
-        return `import { PebbleBar } from "frosted-ui";\n\n` +
+        return `import { PebbleBar } from "frosted-ui-components";\n\n` +
                `<PebbleBar\n` +
                `  items={navItems}\n` +
                `  layout="organic"\n` +
                `  ${commonProps}\n` +
                `/>`;
       case "crystal-bar":
-        return `import { CrystalBar } from "frosted-ui";\n\n` +
+        return `import { CrystalBar } from "frosted-ui-components";\n\n` +
                `<CrystalBar\n` +
                `  items={navItems}\n` +
                `  clipAngle={12}\n` +
                `  ${commonProps}\n` +
                `/>`;
       case "arc-bar":
-        return `import { ArcBar } from "frosted-ui";\n\n` +
+        return `import { ArcBar } from "frosted-ui-components";\n\n` +
                `<ArcBar\n` +
                `  items={navItems}\n` +
                `  arcHeight={15}\n` +
                `  ${commonProps}\n` +
                `/>`;
       case "ribbon-bar":
-        return `import { RibbonBar } from "frosted-ui";\n\n` +
+        return `import { RibbonBar } from "frosted-ui-components";\n\n` +
                `<RibbonBar\n` +
                `  items={navItems}\n` +
                `  showRibbonLayers={true}\n` +
                `  ${commonProps}\n` +
                `/>`;
       case "expandable-nav-sheet":
-        return `import { ExpandableNavSheet } from "frosted-ui";\n\n` +
+        return `import { ExpandableNavSheet } from "frosted-ui-components";\n\n` +
                `<ExpandableNavSheet\n` +
                `  items={navItems}\n` +
                `  menuItems={menuItems} // NavSheetItem[]\n` +
@@ -187,7 +187,7 @@ export default function App() {
                `  ${commonProps}\n` +
                `/>`;
       case "command-sheet":
-        return `import { CommandSheet } from "frosted-ui";\n\n` +
+        return `import { CommandSheet } from "frosted-ui-components";\n\n` +
                `const [open, setOpen] = useState(false);\n\n` +
                `<CommandSheet\n` +
                `  actions={actions} // CommandAction[]\n` +
@@ -198,7 +198,7 @@ export default function App() {
                `  ${commonProps}\n` +
                `/>`;
       case "profile-sheet":
-        return `import { ProfileSheet } from "frosted-ui";\n\n` +
+        return `import { ProfileSheet } from "frosted-ui-components";\n\n` +
                `const [open, setOpen] = useState(false);\n\n` +
                `<ProfileSheet\n` +
                `  user={{\n` +
@@ -217,7 +217,7 @@ export default function App() {
                `  ${commonProps}\n` +
                `/>`;
       case "app-launcher":
-        return `import { AppLauncher } from "frosted-ui";\n\n` +
+        return `import { AppLauncher } from "frosted-ui-components";\n\n` +
                `<AppLauncher\n` +
                `  apps={apps} // AppItem[]\n` +
                `  columns={4}\n` +
@@ -225,7 +225,7 @@ export default function App() {
                `  ${commonProps}\n` +
                `/>`;
       case "floating-search-orb":
-        return `import { FloatingSearchOrb } from "frosted-ui";\n\n` +
+        return `import { FloatingSearchOrb } from "frosted-ui-components";\n\n` +
                `<FloatingSearchOrb\n` +
                `  placeholder="Search..."\n` +
                `  onSearch={(val) => {}}\n` +
@@ -233,7 +233,7 @@ export default function App() {
                `  ${commonProps}\n` +
                `/>`;
       case "floating-action-button":
-        return `import { FloatingActionButton } from "frosted-ui";\n\n` +
+        return `import { FloatingActionButton } from "frosted-ui-components";\n\n` +
                `<FloatingActionButton\n` +
                `  icon={<Plus />}\n` +
                `  actions={actions} // FABAction[]\n` +
@@ -241,7 +241,7 @@ export default function App() {
                `  ${commonProps}\n` +
                `/>`;
       case "floating-command-bar":
-        return `import { FloatingCommandBar } from "frosted-ui";\n\n` +
+        return `import { FloatingCommandBar } from "frosted-ui-components";\n\n` +
                `<FloatingCommandBar\n` +
                `  placeholder="Type a command..."\n` +
                `  onSubmit={(val) => {}}\n` +
@@ -249,7 +249,7 @@ export default function App() {
                `  ${commonProps}\n` +
                `/>`;
       case "glass-agent-card":
-        return `import { GlassAgentCard } from "frosted-ui";\n\n` +
+        return `import { GlassAgentCard } from "frosted-ui-components";\n\n` +
                `<GlassAgentCard\n` +
                `  name="AutoGPT"\n` +
                `  role="Autonomous Execution Agent"\n` +
@@ -257,7 +257,7 @@ export default function App() {
                `  tools={["Search", "Code Interpreter"]}\n` +
                `/>`;
       case "glass-thinking-panel":
-        return `import { GlassThinkingPanel } from "frosted-ui";\n\n` +
+        return `import { GlassThinkingPanel } from "frosted-ui-components";\n\n` +
                `<GlassThinkingPanel\n` +
                `  steps={[\n` +
                `    { text: "Analyzing goal...", status: "done" },\n` +
@@ -266,19 +266,19 @@ export default function App() {
                `  ]}\n` +
                `/>`;
       case "glass-workflow-node":
-        return `import { GlassWorkflowNode } from "frosted-ui";\n\n` +
+        return `import { GlassWorkflowNode } from "frosted-ui-components";\n\n` +
                `<GlassWorkflowNode\n` +
                `  title="Data Extraction"\n` +
                `  type="process"\n` +
                `  active={true}\n` +
                `/>`;
       case "glass-reasoning-bubble":
-        return `import { GlassReasoningBubble } from "frosted-ui";\n\n` +
+        return `import { GlassReasoningBubble } from "frosted-ui-components";\n\n` +
                `<GlassReasoningBubble>\n` +
                `  <p>Based on the user's request, I should first extract the data...</p>\n` +
                `</GlassReasoningBubble>`;
       case "glass-memory-panel":
-        return `import { GlassMemoryPanel } from "frosted-ui";\n\n` +
+        return `import { GlassMemoryPanel } from "frosted-ui-components";\n\n` +
                `<GlassMemoryPanel\n` +
                `  memories={[\n` +
                `    { id: "1", type: "short", content: "User prefers dark mode." },\n` +
@@ -286,7 +286,7 @@ export default function App() {
                `  ]}\n` +
                `/>`;
       case "glass-knowledge-graph":
-        return `import { GlassKnowledgeGraph } from "frosted-ui";\n\n` +
+        return `import { GlassKnowledgeGraph } from "frosted-ui-components";\n\n` +
                `<GlassKnowledgeGraph\n` +
                `  nodes={[\n` +
                `    { id: "1", label: "User", x: 20, y: 30 },\n` +
@@ -294,7 +294,7 @@ export default function App() {
                `  ]}\n` +
                `/>`;
       case "glass-command-center":
-        return `import { GlassCommandCenter } from "frosted-ui";\n\n` +
+        return `import { GlassCommandCenter } from "frosted-ui-components";\n\n` +
                `<GlassCommandCenter>\n` +
                `  <h1>Agent Dashboard</h1>\n` +
                `</GlassCommandCenter>`;
