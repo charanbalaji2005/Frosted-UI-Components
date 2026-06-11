@@ -10,68 +10,51 @@ import {
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
 
-// ─── Component Registry (59 Components from User Request) ────────────────────
+// ─── Actual Nebula UI Registry Components (35 total) ─────────────────────────
 const componentsList = [
-  { id: "accordion", name: "Accordion", category: "Components" },
-  { id: "alert", name: "Alert", category: "Components" },
-  { id: "alert-dialog", name: "Alert Dialog", category: "Components" },
-  { id: "aspect-ratio", name: "Aspect Ratio", category: "Components" },
-  { id: "avatar", name: "Avatar", category: "Components" },
-  { id: "badge", name: "Badge", category: "Components" },
-  { id: "breadcrumb", name: "Breadcrumb", category: "Components" },
-  { id: "button", name: "Button", category: "Components" },
-  { id: "button-group", name: "Button Group", category: "Components" },
-  { id: "calendar", name: "Calendar", category: "Components" },
-  { id: "card", name: "Card", category: "Components" },
-  { id: "carousel", name: "Carousel", category: "Components" },
-  { id: "chart", name: "Chart", category: "Components" },
-  { id: "checkbox", name: "Checkbox", category: "Components" },
-  { id: "collapsible", name: "Collapsible", category: "Components" },
-  { id: "combobox", name: "Combobox", category: "Components" },
-  { id: "command", name: "Command", category: "Components" },
-  { id: "context-menu", name: "Context Menu", category: "Components" },
-  { id: "data-table", name: "Data Table", category: "Components" },
-  { id: "date-picker", name: "Date Picker", category: "Components" },
-  { id: "dialog", name: "Dialog", category: "Components" },
-  { id: "direction", name: "Direction", category: "Components" },
-  { id: "drawer", name: "Drawer", category: "Components" },
-  { id: "dropdown-menu", name: "Dropdown Menu", category: "Components" },
-  { id: "empty", name: "Empty", category: "Components" },
-  { id: "field", name: "Field", category: "Components" },
-  { id: "hover-card", name: "Hover Card", category: "Components" },
-  { id: "input", name: "Input", category: "Components" },
-  { id: "input-group", name: "Input Group", category: "Components" },
-  { id: "input-otp", name: "Input OTP", category: "Components" },
-  { id: "item", name: "Item", category: "Components" },
-  { id: "kbd", name: "Kbd", category: "Components" },
-  { id: "label", name: "Label", category: "Components" },
-  { id: "menubar", name: "Menubar", category: "Components" },
-  { id: "native-select", name: "Native Select", category: "Components" },
-  { id: "navigation-menu", name: "Navigation Menu", category: "Components" },
-  { id: "pagination", name: "Pagination", category: "Components" },
-  { id: "popover", name: "Popover", category: "Components" },
-  { id: "progress", name: "Progress", category: "Components" },
-  { id: "radio-group", name: "Radio Group", category: "Components" },
-  { id: "resizable", name: "Resizable", category: "Components" },
-  { id: "scroll-area", name: "Scroll Area", category: "Components" },
-  { id: "select", name: "Select", category: "Components" },
-  { id: "separator", name: "Separator", category: "Components" },
-  { id: "sheet", name: "Sheet", category: "Components" },
-  { id: "sidebar", name: "Sidebar", category: "Components" },
-  { id: "skeleton", name: "Skeleton", category: "Components" },
-  { id: "slider", name: "Slider", category: "Components" },
-  { id: "sonner", name: "Sonner", category: "Components" },
-  { id: "spinner", name: "Spinner", category: "Components" },
-  { id: "switch", name: "Switch", category: "Components" },
-  { id: "table", name: "Table", category: "Components" },
-  { id: "tabs", name: "Tabs", category: "Components" },
-  { id: "textarea", name: "Textarea", category: "Components" },
-  { id: "toast", name: "Toast", category: "Components" },
-  { id: "toggle", name: "Toggle", category: "Components" },
-  { id: "toggle-group", name: "Toggle Group", category: "Components" },
-  { id: "tooltip", name: "Tooltip", category: "Components" },
-  { id: "typography", name: "Typography", category: "Components" }
+  // UI Primitives
+  { id: "accordion",               name: "Accordion",               category: "UI Primitives",   deps: ["framer-motion","lucide-react","clsx","tailwind-merge"] },
+  { id: "button",                  name: "Button",                  category: "UI Primitives",   deps: ["framer-motion","clsx","tailwind-merge"] },
+  { id: "card",                    name: "Card",                    category: "UI Primitives",   deps: ["framer-motion","clsx","tailwind-merge"] },
+  { id: "tabs",                    name: "Tabs",                    category: "UI Primitives",   deps: ["framer-motion","clsx","tailwind-merge"] },
+  { id: "forms",                   name: "Forms",                   category: "UI Primitives",   deps: ["clsx","tailwind-merge"] },
+  { id: "spotlight",               name: "Spotlight",               category: "UI Primitives",   deps: ["framer-motion","clsx","tailwind-merge"] },
+  // Overlays & Dialogs
+  { id: "dialog",                  name: "Dialog",                  category: "Overlays",        deps: ["framer-motion","lucide-react","clsx","tailwind-merge"] },
+  { id: "modal",                   name: "Modal",                   category: "Overlays",        deps: ["framer-motion","lucide-react","clsx","tailwind-merge"] },
+  { id: "drawer",                  name: "Drawer",                  category: "Overlays",        deps: ["framer-motion","lucide-react","clsx","tailwind-merge"] },
+  { id: "command",                 name: "Command",                 category: "Overlays",        deps: ["framer-motion","lucide-react","clsx","tailwind-merge"] },
+  { id: "command-sheet",           name: "Command Sheet",           category: "Overlays",        deps: ["framer-motion","lucide-react","class-variance-authority","clsx","tailwind-merge"] },
+  // Navigation
+  { id: "navbar",                  name: "Navbar",                  category: "Navigation",      deps: ["framer-motion","lucide-react","clsx","tailwind-merge"] },
+  { id: "arc-bar",                 name: "Arc Bar",                 category: "Navigation",      deps: ["framer-motion","lucide-react","class-variance-authority","clsx","tailwind-merge"] },
+  { id: "crystal-bar",             name: "Crystal Bar",             category: "Navigation",      deps: ["framer-motion","lucide-react","class-variance-authority","clsx","tailwind-merge"] },
+  { id: "pebble-bar",              name: "Pebble Bar",              category: "Navigation",      deps: ["framer-motion","lucide-react","class-variance-authority","clsx","tailwind-merge"] },
+  { id: "pill-bar",                name: "Pill Bar",                category: "Navigation",      deps: ["framer-motion","lucide-react","class-variance-authority","clsx","tailwind-merge"] },
+  { id: "ribbon-bar",              name: "Ribbon Bar",              category: "Navigation",      deps: ["framer-motion","lucide-react","class-variance-authority","clsx","tailwind-merge"] },
+  { id: "floating-island-bar",     name: "Floating Island Bar",     category: "Navigation",      deps: ["framer-motion","lucide-react","class-variance-authority","clsx","tailwind-merge"] },
+  { id: "floating-command-bar",    name: "Floating Command Bar",    category: "Navigation",      deps: ["framer-motion","lucide-react","class-variance-authority","clsx","tailwind-merge"] },
+  { id: "floating-search-orb",     name: "Floating Search Orb",    category: "Navigation",      deps: ["framer-motion","lucide-react","class-variance-authority","clsx","tailwind-merge"] },
+  { id: "floating-action-button",  name: "Floating Action Button",  category: "Navigation",      deps: ["framer-motion","lucide-react","class-variance-authority","clsx","tailwind-merge"] },
+  { id: "expandable-nav-sheet",    name: "Expandable Nav Sheet",    category: "Navigation",      deps: ["framer-motion","lucide-react","clsx","tailwind-merge"] },
+  { id: "profile-sheet",          name: "Profile Sheet",           category: "Navigation",      deps: ["framer-motion","lucide-react","class-variance-authority","clsx","tailwind-merge"] },
+  { id: "app-launcher",            name: "App Launcher",            category: "Navigation",      deps: ["framer-motion","lucide-react","class-variance-authority","clsx","tailwind-merge"] },
+  // Sections / Page Blocks
+  { id: "hero",                    name: "Hero",                    category: "Page Blocks",     deps: ["framer-motion","lucide-react","clsx","tailwind-merge"] },
+  { id: "pricing",                 name: "Pricing",                 category: "Page Blocks",     deps: ["framer-motion","lucide-react","clsx","tailwind-merge"] },
+  { id: "testimonials",            name: "Testimonials",            category: "Page Blocks",     deps: ["framer-motion","lucide-react","clsx","tailwind-merge"] },
+  { id: "dashboard",              name: "Dashboard",               category: "Page Blocks",     deps: ["framer-motion","lucide-react","clsx","tailwind-merge"] },
+  // AI / Agent Components
+  { id: "glass-agent-card",        name: "Glass Agent Card",        category: "AI Components",   deps: ["framer-motion","clsx","tailwind-merge"] },
+  { id: "glass-command-center",    name: "Glass Command Center",    category: "AI Components",   deps: ["framer-motion","lucide-react","clsx","tailwind-merge"] },
+  { id: "glass-knowledge-graph",   name: "Glass Knowledge Graph",   category: "AI Components",   deps: ["framer-motion","clsx","tailwind-merge"] },
+  { id: "glass-memory-panel",      name: "Glass Memory Panel",      category: "AI Components",   deps: ["framer-motion","clsx","tailwind-merge"] },
+  { id: "glass-reasoning-bubble",  name: "Glass Reasoning Bubble",  category: "AI Components",   deps: ["framer-motion","clsx","tailwind-merge"] },
+  { id: "glass-thinking-panel",    name: "Glass Thinking Panel",    category: "AI Components",   deps: ["framer-motion","clsx","tailwind-merge"] },
+  { id: "glass-workflow-node",     name: "Glass Workflow Node",     category: "AI Components",   deps: ["framer-motion","clsx","tailwind-merge"] },
 ];
+
+const GITHUB_BASE = "https://raw.githubusercontent.com/charanbalaji2005/Frosted-UI-Components/main/registry";
 
 // ─── Dynamic Code Snippet Generator ──────────────────────────────────────────
 const CODE_SNIPPETS: Record<string, string> = {};
@@ -230,7 +213,14 @@ export default function DocsPage() {
   const [selectedComponent, setSelectedComponent] = useState<string>("install");
   const [searchQuery, setSearchQuery] = useState("");
   const [copied, setCopied] = useState(false);
-  const [themeMode, setThemeMode] = useState<"dark" | "light">("dark");
+  const [themeMode, setThemeMode] = useState<"dark" | "light">(() => {
+    // Initialise from localStorage if running in a browser
+    if (typeof window !== "undefined") {
+      const saved = localStorage.getItem("nebula-theme");
+      if (saved === "light" || saved === "dark") return saved;
+    }
+    return "dark";
+  });
   const [activeTab, setActiveTab] = useState<"preview" | "code">("preview");
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [toastMsg, setToastMsg] = useState("");
@@ -240,6 +230,17 @@ export default function DocsPage() {
     const stored = localStorage.getItem("nebula-cookies");
     if (stored !== null) setCookiesAccepted(stored === "true");
   }, []);
+
+  // Sync theme preference to localStorage whenever themeMode changes
+  useEffect(() => {
+    localStorage.setItem("nebula-theme", themeMode);
+    const root = window.document.documentElement;
+    if (themeMode === "dark") {
+      root.classList.add("dark");
+    } else {
+      root.classList.remove("dark");
+    }
+  }, [themeMode]);
 
   // Live Slider Parameters for Customizing Glassmorphic Styling
   const [glassBlur, setGlassBlur] = useState<number>(12);
@@ -260,14 +261,10 @@ export default function DocsPage() {
   const [tooltipVisible, setTooltipVisible] = useState(false);
   const [toggleActive, setToggleActive] = useState(false);
 
-  useEffect(() => {
-    const root = window.document.documentElement;
-    if (themeMode === "dark") {
-      root.classList.add("dark");
-    } else {
-      root.classList.remove("dark");
-    }
-  }, [themeMode]);
+  // Theme toggle helper — updates state (which triggers the useEffect above to persist)
+  const toggleTheme = () => {
+    setThemeMode(prev => (prev === "dark" ? "light" : "dark"));
+  };
 
   const triggerToast = (msg: string) => {
     setToastMsg(msg);
@@ -1080,7 +1077,7 @@ export default function DocsPage() {
 
             {/* Theme Toggle */}
             <button
-              onClick={() => setThemeMode(themeMode === "dark" ? "light" : "dark")}
+              onClick={toggleTheme}
               className="p-1.5 rounded-md hover:bg-current/5 transition-colors opacity-70 hover:opacity-100 cursor-pointer"
             >
               {themeMode === "dark" ? <Sun className="h-4.5 w-4.5" /> : <Moon className="h-4.5 w-4.5" />}
