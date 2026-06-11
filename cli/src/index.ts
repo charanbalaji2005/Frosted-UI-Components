@@ -272,19 +272,90 @@ function listComponents() {
   console.log(chalk.bold.white("\n✦ Frosted UI — Available Components\n"));
 
   const categories: Record<string, ComponentName[]> = {
-    "Navigation Bars": ["floating-island-bar", "pill-bar", "arc-bar", "crystal-bar", "ribbon-bar", "wave-bar"],
-    "Pebble & Dock": ["pebble-bar", "dock-bar"],
+    "Navigation Bars": ["floating-island-bar", "pill-bar", "arc-bar", "crystal-bar", "ribbon-bar"],
+    "Organic Pebble": ["pebble-bar"],
     "Expandable Sheets": ["expandable-nav-sheet", "command-sheet", "profile-sheet"],
     "Floating Elements": ["app-launcher", "floating-search-orb", "floating-action-button", "floating-command-bar"],
+    "AI Agent Interfaces": [
+      "glass-agent-card",
+      "glass-thinking-panel",
+      "glass-workflow-node",
+      "glass-reasoning-bubble",
+      "glass-memory-panel",
+      "glass-command-center",
+      "glass-knowledge-graph"
+    ]
   };
 
   for (const [category, components] of Object.entries(categories)) {
     console.log(chalk.bold.white(`  ${category}`));
     for (const name of components) {
-      console.log(chalk.gray(`    npx frosted-ui add ${name}`));
+      console.log(chalk.gray(`    npx frosted-ui-cli add ${name}`));
     }
     console.log();
   }
+}
+
+// ─── REMOVE command ──────────────────────────────────────────────────────────
+
+async function removeComponent(names: string[], options: { cwd: string }) {
+  const cwd = path.resolve(options.cwd ?? process.cwd());
+  const config = await detectProject(cwd);
+
+  console.log(chalk.bold.white("\n✦ Frosted UI — Remove Components\n"));
+
+  for (const name of names) {
+    const ext = config.typescript ? "tsx" : "jsx";
+    const destFile = path.join(config.componentsDir, `${name}.${ext}`);
+
+    if (await fs.pathExists(destFile)) {
+      await fs.remove(destFile);
+      console.log(chalk.green(`✓ Removed: ${path.relative(cwd, destFile)}`));
+    } else {
+      console.log(chalk.yellow(`⚠ Not found: ${name} (checked ${path.relative(cwd, destFile)})`));
+    }
+  }
+  console.log();
+}
+
+// ─── UPGRADE command ─────────────────────────────────────────────────────────
+
+async function upgradeComponent(names: string[], options: { cwd: string; force?: boolean }) {
+  const cwd = path.resolve(options.cwd ?? process.cwd());
+  const config = await detectProject(cwd);
+
+  console.log(chalk.bold.white("\n✦ Frosted UI — Upgrade Components\n"));
+
+  const targets = names.length > 0 ? names : COMPONENTS.filter(async (c) => {
+    const ext = config.typescript ? "tsx" : "jsx";
+    return await fs.pathExists(path.join(config.componentsDir, `${c}.${ext}`));
+  });
+
+  if (targets.length === 0) {
+    console.log(chalk.gray("No local Frosted UI components detected to upgrade."));
+    return;
+  }
+
+  for (const name of targets) {
+    const ext = config.typescript ? "tsx" : "jsx";
+    const destFile = path.join(config.componentsDir, `${name}.${ext}`);
+    const exists = await fs.pathExists(destFile);
+
+    if (!exists) {
+      console.log(chalk.yellow(`⚠ Skipped: ${name} (does not exist locally)`));
+      continue;
+    }
+
+    const spinner = ora(`Upgrading ${name}…`).start();
+    try {
+      const content = await fetchComponentFile(name as ComponentName, config.typescript);
+      await fs.outputFile(destFile, content);
+      spinner.succeed(chalk.green(`Upgraded: ${name}`));
+    } catch (err) {
+      spinner.fail(chalk.red(`Failed to upgrade ${name}: ${err}`));
+    }
+  }
+  console.log();
 }
 
 // ─── CLI Setup ────────────────────────────────────────────────────────────────
@@ -292,10 +363,10 @@ function listComponents() {
 const program = new Command()
   .name("frosted-ui")
   .description("Frosted UI — Add frosted glass components to your React project")
-  .version("1.0.0");
+  .version("1.0.1");
 
 program
-  .command("add", { isDefault: true })
+  .command("add")
   .description("Add a component to your project")
   .argument("<components...>", "component name(s) to add")
   .option("--cwd <dir>", "working directory", process.cwd())
@@ -315,7 +386,24 @@ program
     const cwd = path.resolve(options.cwd ?? process.cwd());
     const config = await detectProject(cwd);
     await installDeps(["framer-motion", "lucide-react", "class-variance-authority", "clsx", "tailwind-merge"], config);
-    console.log(chalk.bold.green("\n✦ Frosted UI initialized! Run `npx frosted-ui list` to see components.\n"));
+    console.log(chalk.bold.green("\n✦ Frosted UI initialized! Run `npx frosted-ui-cli list` to see components.\n"));
+  });
+
+program
+  .command("remove")
+  .description("Remove component(s) from your project")
+  .argument("<components...>", "component name(s) to remove")
+  .option("--cwd <dir>", "working directory", process.cwd())
+  .action(removeComponent);
+
+program
+  .command("upgrade")
+  .description("Upgrade existing component(s) to the latest version")
+  .argument("[components...]", "optional component name(s) to upgrade")
+  .option("--cwd <dir>", "working directory", process.cwd())
+  .action(async (names, options) => {
+    await upgradeComponent(names, options);
   });
 
 program.parse();
+

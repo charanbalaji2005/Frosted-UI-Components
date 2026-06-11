@@ -1,6 +1,6 @@
 {
   "name": "frosted-ui-cli",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "type": "module",
   "description": "CLI for adding Frosted UI components to your project",
   "author": "Charan Balaji",
