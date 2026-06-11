@@ -1,5 +1,6 @@
 {
-  "buildCommand": "npm install && npm run build && cd playground && npm install && npm run build",
-  "outputDirectory": "playground/dist",
-  "framework": "vite"
+  "buildCommand": "cd website && npm install && npm run build",
+  "outputDirectory": "website/.next",
+  "framework": "nextjs",
+  "installCommand": "echo 'skip root install'"
 }
