@@ -1,0 +1,9 @@
+{
+  "name": "expandable-nav-sheet",
+  "version": "1.0.0",
+  "description": "A frosted glass bottom nav that expands into a full menu sheet with auth buttons.",
+  "category": "sheets",
+  "tags": ["navigation", "sheet", "expandable", "menu", "frosted-glass"],
+  "dependencies": ["framer-motion", "lucide-react", "clsx", "tailwind-merge"],
+  "files": ["component.tsx"]
+}

@@ -1,0 +1,6 @@
+{
+  "name": "floating-search-orb",
+  "version": "1.0.0",
+  "dependencies": ["framer-motion", "lucide-react", "class-variance-authority", "clsx", "tailwind-merge"],
+  "files": ["component.tsx"]
+}

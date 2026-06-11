@@ -1,0 +1,141 @@
+{
+  "version": "1.0.0",
+  "updatedAt": "2025-06-11T00:00:00.000Z",
+  "components": [
+    {
+      "name": "floating-island-bar",
+      "category": "navigation",
+      "description": "Premium floating bottom nav inspired by Apple Dynamic Island. Glass container, active bubble, optional center FAB.",
+      "dependencies": ["framer-motion", "lucide-react", "class-variance-authority", "clsx", "tailwind-merge"],
+      "files": ["component.tsx"],
+      "sourceUrl": "https://raw.githubusercontent.com/frosted-ui/frosted-ui/main/registry/floating-island-bar/component.tsx",
+      "docsUrl": "https://frosted-ui.dev/docs/floating-island-bar"
+    },
+    {
+      "name": "expandable-nav-sheet",
+      "category": "sheets",
+      "description": "Bottom nav bar that expands into a full frosted glass menu sheet with auth buttons.",
+      "dependencies": ["framer-motion", "lucide-react", "clsx", "tailwind-merge"],
+      "files": ["component.tsx"],
+      "sourceUrl": "https://raw.githubusercontent.com/frosted-ui/frosted-ui/main/registry/expandable-nav-sheet/component.tsx",
+      "docsUrl": "https://frosted-ui.dev/docs/expandable-nav-sheet"
+    },
+    {
+      "name": "pill-bar",
+      "category": "navigation",
+      "description": "Frosted glass pill-shaped navigation with smooth active label slide animation.",
+      "dependencies": ["framer-motion", "clsx", "tailwind-merge"],
+      "files": ["component.tsx"],
+      "sourceUrl": "https://raw.githubusercontent.com/frosted-ui/frosted-ui/main/registry/pill-bar/component.tsx",
+      "docsUrl": "https://frosted-ui.dev/docs/pill-bar"
+    },
+    {
+      "name": "pebble-bar",
+      "category": "navigation",
+      "description": "Individual frosted glass pebbles arranged organically with spring hover physics.",
+      "dependencies": ["framer-motion", "clsx", "tailwind-merge"],
+      "files": ["component.tsx"],
+      "sourceUrl": "https://raw.githubusercontent.com/frosted-ui/frosted-ui/main/registry/pebble-bar/component.tsx",
+      "docsUrl": "https://frosted-ui.dev/docs/pebble-bar"
+    },
+    {
+      "name": "wave-bar",
+      "category": "navigation",
+      "description": "Split-panel navigation with elevated center FAB and wave silhouette.",
+      "dependencies": ["framer-motion", "clsx", "tailwind-merge"],
+      "files": ["component.tsx"],
+      "sourceUrl": "https://raw.githubusercontent.com/frosted-ui/frosted-ui/main/registry/wave-bar/component.tsx",
+      "docsUrl": "https://frosted-ui.dev/docs/wave-bar"
+    },
+    {
+      "name": "crystal-bar",
+      "category": "navigation",
+      "description": "Hexagonal prism clip-path navigation with prismatic glass aesthetics.",
+      "dependencies": ["framer-motion", "clsx", "tailwind-merge"],
+      "files": ["component.tsx"],
+      "sourceUrl": "https://raw.githubusercontent.com/frosted-ui/frosted-ui/main/registry/crystal-bar/component.tsx",
+      "docsUrl": "https://frosted-ui.dev/docs/crystal-bar"
+    },
+    {
+      "name": "arc-bar",
+      "category": "navigation",
+      "description": "Frosted glass nav with arched top edge and gradient glow light leak.",
+      "dependencies": ["framer-motion", "clsx", "tailwind-merge"],
+      "files": ["component.tsx"],
+      "sourceUrl": "https://raw.githubusercontent.com/frosted-ui/frosted-ui/main/registry/arc-bar/component.tsx",
+      "docsUrl": "https://frosted-ui.dev/docs/arc-bar"
+    },
+    {
+      "name": "ribbon-bar",
+      "category": "navigation",
+      "description": "Multi-layer folded glass ribbon navigation with cascading depth layers.",
+      "dependencies": ["framer-motion", "clsx", "tailwind-merge"],
+      "files": ["component.tsx"],
+      "sourceUrl": "https://raw.githubusercontent.com/frosted-ui/frosted-ui/main/registry/ribbon-bar/component.tsx",
+      "docsUrl": "https://frosted-ui.dev/docs/ribbon-bar"
+    },
+    {
+      "name": "dock-bar",
+      "category": "navigation",
+      "description": "macOS-style frosted glass dock with magnetic hover icon magnification.",
+      "dependencies": ["framer-motion", "clsx", "tailwind-merge"],
+      "files": ["component.tsx"],
+      "sourceUrl": "https://raw.githubusercontent.com/frosted-ui/frosted-ui/main/registry/dock-bar/component.tsx",
+      "docsUrl": "https://frosted-ui.dev/docs/dock-bar"
+    },
+    {
+      "name": "app-launcher",
+      "category": "floating",
+      "description": "iOS-style frosted glass app grid launcher with pagination support.",
+      "dependencies": ["framer-motion", "clsx", "tailwind-merge"],
+      "files": ["component.tsx"],
+      "sourceUrl": "https://raw.githubusercontent.com/frosted-ui/frosted-ui/main/registry/app-launcher/component.tsx",
+      "docsUrl": "https://frosted-ui.dev/docs/app-launcher"
+    },
+    {
+      "name": "command-sheet",
+      "category": "sheets",
+      "description": "Cmd+K frosted glass command palette with fuzzy search and keyboard navigation.",
+      "dependencies": ["framer-motion", "lucide-react", "clsx", "tailwind-merge"],
+      "files": ["component.tsx"],
+      "sourceUrl": "https://raw.githubusercontent.com/frosted-ui/frosted-ui/main/registry/command-sheet/component.tsx",
+      "docsUrl": "https://frosted-ui.dev/docs/command-sheet"
+    },
+    {
+      "name": "profile-sheet",
+      "category": "sheets",
+      "description": "Slide-up frosted glass profile panel with stats, subscription badge and action rows.",
+      "dependencies": ["framer-motion", "lucide-react", "clsx", "tailwind-merge"],
+      "files": ["component.tsx"],
+      "sourceUrl": "https://raw.githubusercontent.com/frosted-ui/frosted-ui/main/registry/profile-sheet/component.tsx",
+      "docsUrl": "https://frosted-ui.dev/docs/profile-sheet"
+    },
+    {
+      "name": "floating-search-orb",
+      "category": "floating",
+      "description": "Pulsing glass orb that spring-expands into a full search input.",
+      "dependencies": ["framer-motion", "lucide-react", "clsx", "tailwind-merge"],
+      "files": ["component.tsx"],
+      "sourceUrl": "https://raw.githubusercontent.com/frosted-ui/frosted-ui/main/registry/floating-search-orb/component.tsx",
+      "docsUrl": "https://frosted-ui.dev/docs/floating-search-orb"
+    },
+    {
+      "name": "floating-action-button",
+      "category": "floating",
+      "description": "Frosted glass FAB that expands into staggered radial action buttons.",
+      "dependencies": ["framer-motion", "lucide-react", "clsx", "tailwind-merge"],
+      "files": ["component.tsx"],
+      "sourceUrl": "https://raw.githubusercontent.com/frosted-ui/frosted-ui/main/registry/floating-action-button/component.tsx",
+      "docsUrl": "https://frosted-ui.dev/docs/floating-action-button"
+    },
+    {
+      "name": "floating-command-bar",
+      "category": "floating",
+      "description": "AI-style floating command input with voice, attach, and quick action chips.",
+      "dependencies": ["framer-motion", "lucide-react", "clsx", "tailwind-merge"],
+      "files": ["component.tsx"],
+      "sourceUrl": "https://raw.githubusercontent.com/frosted-ui/frosted-ui/main/registry/floating-command-bar/component.tsx",
+      "docsUrl": "https://frosted-ui.dev/docs/floating-command-bar"
+    }
+  ]
+}

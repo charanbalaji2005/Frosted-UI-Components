@@ -1,0 +1,72 @@
+{
+  "name": "frosted-ui",
+  "version": "1.0.0",
+  "description": "The world's first Frosted Glass Navigation & Mobile UX Component Library",
+  "author": "Frosted UI Contributors",
+  "license": "MIT",
+  "homepage": "https://frosted-ui.dev",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/frosted-ui/frosted-ui"
+  },
+  "keywords": [
+    "react",
+    "ui",
+    "components",
+    "frosted-glass",
+    "glassmorphism",
+    "navigation",
+    "mobile",
+    "framer-motion",
+    "tailwind",
+    "shadcn"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "lint": "eslint src --ext .ts,.tsx",
+    "typecheck": "tsc --noEmit",
+    "registry:build": "node scripts/build-registry.mjs",
+    "cli:build": "cd cli && npm run build",
+    "prepublishOnly": "npm run build"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./components/*": {
+      "import": "./dist/components/*.mjs",
+      "require": "./dist/components/*.js",
+      "types": "./dist/components/*.d.ts"
+    }
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "registry",
+    "README.md"
+  ],
+  "peerDependencies": {
+    "react": "^18.0.0 || ^19.0.0",
+    "react-dom": "^18.0.0 || ^19.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "eslint": "^9.0.0",
+    "tailwindcss": "^4.3.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.4.0"
+  },
+  "dependencies": {
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.0",
+    "framer-motion": "^11.0.0",
+    "lucide-react": "^0.400.0",
+    "tailwind-merge": "^2.3.0"
+  }
+}

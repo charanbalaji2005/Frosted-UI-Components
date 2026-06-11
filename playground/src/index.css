@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+@import "tailwindcss";
+
+@source "../../src/**/*.tsx";
+
+@theme {
+  --font-sans: 'Outfit', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-heading: 'Outfit', sans-serif;
+
+  /* Frosted Blur intensities */
+  --blur-frosted: 40px;
+  --blur-frosted-heavy: 60px;
+  --blur-frosted-ultra: 80px;
+
+  /* Colors */
+  --color-frosted-glass-dark: rgba(255, 255, 255, 0.04);
+  --color-frosted-glass-mid: rgba(255, 255, 255, 0.07);
+  --color-frosted-glass-light: rgba(255, 255, 255, 0.10);
+  --color-frosted-glass-active: rgba(255, 255, 255, 0.14);
+
+  --color-frosted-border-subtle: rgba(255, 255, 255, 0.08);
+  --color-frosted-border-mid: rgba(255, 255, 255, 0.12);
+  --color-frosted-border-bright: rgba(255, 255, 255, 0.18);
+
+  --color-frosted-glow-purple: rgba(120, 80, 255, 0.35);
+  --color-frosted-glow-blue: rgba(60, 160, 255, 0.30);
+  --color-frosted-glow-pink: rgba(255, 60, 200, 0.25);
+  --color-frosted-glow-teal: rgba(0, 200, 180, 0.25);
+
+  /* Border radius */
+  --radius-island: 100px;
+  --radius-4xl: 2rem;
+  --radius-5xl: 2.5rem;
+  --radius-6xl: 3rem;
+
+  /* Shadows */
+  --shadow-frosted-sm: 0 4px 16px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  --shadow-frosted-md: 0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.10);
+  --shadow-frosted-lg: 0 16px 60px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  --shadow-frosted-xl: 0 24px 80px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.14);
+  --shadow-glow-purple: 0 0 40px rgba(120, 80, 255, 0.35);
+  --shadow-glow-blue: 0 0 40px rgba(60, 160, 255, 0.3);
+  --shadow-glow-pink: 0 0 40px rgba(255, 60, 200, 0.3);
+  --shadow-island-float: 0 8px 32px rgba(0, 0, 0, 0.4), 0 0 60px rgba(120, 80, 255, 0.2);
+
+  /* Animations */
+  --animate-glass-shimmer: glass-shimmer 3s linear infinite;
+  --animate-orb-pulse: orb-pulse 2s ease-in-out infinite;
+  --animate-float: float 3s ease-in-out infinite;
+  --animate-island-breathe: island-breathe 4s ease-in-out infinite;
+}
+
+@keyframes glass-shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+@keyframes orb-pulse {
+  0%, 100% { transform: scale(1); opacity: 0.4; }
+  50% { transform: scale(1.12); opacity: 0.15; }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+}
+@keyframes island-breathe {
+  0%, 100% { transform: scaleX(1); }
+  50% { transform: scaleX(0.98); }
+}
+
+/* Custom background utility classes */
+@utility bg-glass-gradient {
+  background-image: linear-gradient(135deg, rgba(255,255,255,0.08) 0%, transparent 50%);
+}
+@utility bg-glass-gradient-vertical {
+  background-image: linear-gradient(180deg, rgba(255,255,255,0.06) 0%, transparent 100%);
+}
+@utility bg-glow-purple {
+  background-image: radial-gradient(ellipse, rgba(120,80,255,0.3), transparent);
+}
+@utility bg-glow-blue {
+  background-image: radial-gradient(ellipse, rgba(60,160,255,0.25), transparent);
+}
+@utility bg-simulator-dark {
+  background: radial-gradient(circle at 50% 0%, #16122d 0%, #08070d 100%);
+}
+@utility bg-noise {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMDAiIGhlaWdodD0iMzAwIj48ZmlsdGVyIGlkPSJub2lzZSI+PGZlVHVyYnVsZW5jZSB0eXBlPSJmcmFjdGFsTm9pc2UiIGJhc2VGcmVxdWVuY3k9IjAuNjUiIG51bU9jdGF2ZXM9IjMiIHN0aXRjaFRpbGVzPSJzdGl0Y2giLz48L2ZpbHRlcj48cmVjdCB3aWR0aD0iMzAwIiBoZWlnaHQ9IjMwMCIgZmlsdGVyPSJ1cmwoI25vaXNlKSIgb3BhY2l0eT0iMC4wMjUiLz48L3N2Zz4=");
+}
+
+/* Custom scrollbar class */
+@utility scrollbar-none {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Reset / Global styles */
+html, body {
+  background-color: #030303;
+  color: #f3f4f6;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+/* Ambient light effects */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 20%;
+  width: 60%;
+  height: 400px;
+  background: radial-gradient(circle, rgba(120, 80, 255, 0.08) 0%, transparent 70%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+body::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 10%;
+  width: 50%;
+  height: 500px;
+  background: radial-gradient(circle, rgba(60, 160, 255, 0.05) 0%, transparent 80%);
+  z-index: 0;
+  pointer-events: none;
+}

@@ -1,0 +1,21 @@
+{
+  "name": "floating-island-bar",
+  "version": "1.0.0",
+  "description": "Premium floating bottom navigation inspired by Apple's Dynamic Island. Frosted glass container with active bubble animation and optional center action.",
+  "category": "navigation",
+  "tags": ["navigation", "bottom-nav", "island", "dynamic-island", "frosted-glass"],
+  "dependencies": [
+    "framer-motion",
+    "lucide-react",
+    "class-variance-authority",
+    "clsx",
+    "tailwind-merge"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    "component.tsx"
+  ],
+  "preview": "https://frosted-ui.dev/components/floating-island-bar",
+  "docs": "https://frosted-ui.dev/docs/floating-island-bar"
+}
