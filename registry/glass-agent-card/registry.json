@@ -1,0 +1,12 @@
+{
+  "name": "glass-agent-card",
+  "dependencies": [
+    "framer-motion",
+    "clsx",
+    "tailwind-merge"
+  ],
+  "registryDependencies": [],
+  "files": [
+    "component.tsx"
+  ]
+}

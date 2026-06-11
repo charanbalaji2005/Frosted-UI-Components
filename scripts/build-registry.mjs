@@ -18,7 +18,7 @@ async function buildRegistry() {
       components.push({
         ...data,
         name: dir.name,
-        sourceUrl: `https://raw.githubusercontent.com/frosted-ui/frosted-ui/main/registry/${dir.name}/component.tsx`,
+        sourceUrl: `https://raw.githubusercontent.com/charanbalaji2005/Frosted-UI-Components/main/registry/${dir.name}/component.tsx`,
         docsUrl: `https://frosted-ui.dev/docs/${dir.name}`,
       });
     } catch {

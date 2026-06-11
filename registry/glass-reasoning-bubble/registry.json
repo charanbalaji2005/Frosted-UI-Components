@@ -1,0 +1,12 @@
+{
+  "name": "glass-reasoning-bubble",
+  "dependencies": [
+    "framer-motion",
+    "clsx",
+    "tailwind-merge"
+  ],
+  "registryDependencies": [],
+  "files": [
+    "component.tsx"
+  ]
+}

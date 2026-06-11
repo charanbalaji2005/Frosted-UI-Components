@@ -10,24 +10,29 @@ import prompts from "prompts";
 
 // ─── Registry ─────────────────────────────────────────────────────────────────
 
-const REGISTRY_BASE = "https://raw.githubusercontent.com/frosted-ui/frosted-ui/main/registry";
+const REGISTRY_BASE = "https://raw.githubusercontent.com/charanbalaji2005/Frosted-UI-Components/main/registry";
 
 const COMPONENTS = [
   "floating-island-bar",
   "expandable-nav-sheet",
   "pill-bar",
   "pebble-bar",
-  "wave-bar",
   "crystal-bar",
   "arc-bar",
   "ribbon-bar",
-  "dock-bar",
   "app-launcher",
   "command-sheet",
   "profile-sheet",
   "floating-search-orb",
   "floating-action-button",
   "floating-command-bar",
+  "glass-agent-card",
+  "glass-thinking-panel",
+  "glass-workflow-node",
+  "glass-reasoning-bubble",
+  "glass-memory-panel",
+  "glass-command-center",
+  "glass-knowledge-graph"
 ] as const;
 
 type ComponentName = typeof COMPONENTS[number];

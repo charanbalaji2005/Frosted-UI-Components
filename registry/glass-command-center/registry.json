@@ -1,0 +1,13 @@
+{
+  "name": "glass-command-center",
+  "dependencies": [
+    "framer-motion",
+    "clsx",
+    "tailwind-merge",
+    "lucide-react"
+  ],
+  "registryDependencies": [],
+  "files": [
+    "component.tsx"
+  ]
+}

@@ -1,7 +1,17 @@
 {
   "name": "frosted-ui-cli",
   "version": "1.0.0",
+  "type": "module",
   "description": "CLI for adding Frosted UI components to your project",
+  "author": "Charan Balaji",
+  "license": "MIT",
+  "keywords": [
+    "frosted-ui",
+    "cli",
+    "glassmorphism",
+    "react",
+    "components"
+  ],
   "bin": {
     "frosted": "./dist/index.js",
     "frosted-ui": "./dist/index.js"

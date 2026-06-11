@@ -1,0 +1,12 @@
+{
+  "name": "glass-knowledge-graph",
+  "dependencies": [
+    "framer-motion",
+    "clsx",
+    "tailwind-merge"
+  ],
+  "registryDependencies": [],
+  "files": [
+    "component.tsx"
+  ]
+}
