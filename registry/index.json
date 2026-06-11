@@ -1,7 +1,22 @@
 {
   "version": "1.0.0",
-  "updatedAt": "2026-06-11T12:23:16.800Z",
+  "updatedAt": "2026-06-11T12:50:22.101Z",
   "components": [
+    {
+      "name": "accordion",
+      "dependencies": [
+        "framer-motion",
+        "lucide-react",
+        "clsx",
+        "tailwind-merge"
+      ],
+      "registryDependencies": [],
+      "files": [
+        "component.tsx"
+      ],
+      "sourceUrl": "https://raw.githubusercontent.com/charanbalaji2005/Frosted-UI-Components/main/registry/accordion/component.tsx",
+      "docsUrl": "https://frosted-ui.dev/docs/accordion"
+    },
     {
       "name": "app-launcher",
       "version": "1.0.0",
@@ -35,6 +50,49 @@
       "docsUrl": "https://frosted-ui.dev/docs/arc-bar"
     },
     {
+      "name": "button",
+      "dependencies": [
+        "framer-motion",
+        "clsx",
+        "tailwind-merge"
+      ],
+      "registryDependencies": [],
+      "files": [
+        "component.tsx"
+      ],
+      "sourceUrl": "https://raw.githubusercontent.com/charanbalaji2005/Frosted-UI-Components/main/registry/button/component.tsx",
+      "docsUrl": "https://frosted-ui.dev/docs/button"
+    },
+    {
+      "name": "card",
+      "dependencies": [
+        "framer-motion",
+        "clsx",
+        "tailwind-merge"
+      ],
+      "registryDependencies": [],
+      "files": [
+        "component.tsx"
+      ],
+      "sourceUrl": "https://raw.githubusercontent.com/charanbalaji2005/Frosted-UI-Components/main/registry/card/component.tsx",
+      "docsUrl": "https://frosted-ui.dev/docs/card"
+    },
+    {
+      "name": "command",
+      "dependencies": [
+        "framer-motion",
+        "lucide-react",
+        "clsx",
+        "tailwind-merge"
+      ],
+      "registryDependencies": [],
+      "files": [
+        "component.tsx"
+      ],
+      "sourceUrl": "https://raw.githubusercontent.com/charanbalaji2005/Frosted-UI-Components/main/registry/command/component.tsx",
+      "docsUrl": "https://frosted-ui.dev/docs/command"
+    },
+    {
       "name": "command-sheet",
       "version": "1.0.0",
       "dependencies": [
@@ -65,6 +123,51 @@
       ],
       "sourceUrl": "https://raw.githubusercontent.com/charanbalaji2005/Frosted-UI-Components/main/registry/crystal-bar/component.tsx",
       "docsUrl": "https://frosted-ui.dev/docs/crystal-bar"
+    },
+    {
+      "name": "dashboard",
+      "dependencies": [
+        "framer-motion",
+        "lucide-react",
+        "clsx",
+        "tailwind-merge"
+      ],
+      "registryDependencies": [],
+      "files": [
+        "component.tsx"
+      ],
+      "sourceUrl": "https://raw.githubusercontent.com/charanbalaji2005/Frosted-UI-Components/main/registry/dashboard/component.tsx",
+      "docsUrl": "https://frosted-ui.dev/docs/dashboard"
+    },
+    {
+      "name": "dialog",
+      "dependencies": [
+        "framer-motion",
+        "lucide-react",
+        "clsx",
+        "tailwind-merge"
+      ],
+      "registryDependencies": [],
+      "files": [
+        "component.tsx"
+      ],
+      "sourceUrl": "https://raw.githubusercontent.com/charanbalaji2005/Frosted-UI-Components/main/registry/dialog/component.tsx",
+      "docsUrl": "https://frosted-ui.dev/docs/dialog"
+    },
+    {
+      "name": "drawer",
+      "dependencies": [
+        "framer-motion",
+        "lucide-react",
+        "clsx",
+        "tailwind-merge"
+      ],
+      "registryDependencies": [],
+      "files": [
+        "component.tsx"
+      ],
+      "sourceUrl": "https://raw.githubusercontent.com/charanbalaji2005/Frosted-UI-Components/main/registry/drawer/component.tsx",
+      "docsUrl": "https://frosted-ui.dev/docs/drawer"
     },
     {
       "name": "expandable-nav-sheet",
@@ -168,6 +271,19 @@
       "docsUrl": "https://frosted-ui.dev/docs/floating-search-orb"
     },
     {
+      "name": "forms",
+      "dependencies": [
+        "clsx",
+        "tailwind-merge"
+      ],
+      "registryDependencies": [],
+      "files": [
+        "component.tsx"
+      ],
+      "sourceUrl": "https://raw.githubusercontent.com/charanbalaji2005/Frosted-UI-Components/main/registry/forms/component.tsx",
+      "docsUrl": "https://frosted-ui.dev/docs/forms"
+    },
+    {
       "name": "glass-agent-card",
       "dependencies": [
         "framer-motion",
@@ -267,6 +383,51 @@
       "docsUrl": "https://frosted-ui.dev/docs/glass-workflow-node"
     },
     {
+      "name": "hero",
+      "dependencies": [
+        "framer-motion",
+        "lucide-react",
+        "clsx",
+        "tailwind-merge"
+      ],
+      "registryDependencies": [],
+      "files": [
+        "component.tsx"
+      ],
+      "sourceUrl": "https://raw.githubusercontent.com/charanbalaji2005/Frosted-UI-Components/main/registry/hero/component.tsx",
+      "docsUrl": "https://frosted-ui.dev/docs/hero"
+    },
+    {
+      "name": "modal",
+      "dependencies": [
+        "framer-motion",
+        "lucide-react",
+        "clsx",
+        "tailwind-merge"
+      ],
+      "registryDependencies": [],
+      "files": [
+        "component.tsx"
+      ],
+      "sourceUrl": "https://raw.githubusercontent.com/charanbalaji2005/Frosted-UI-Components/main/registry/modal/component.tsx",
+      "docsUrl": "https://frosted-ui.dev/docs/modal"
+    },
+    {
+      "name": "navbar",
+      "dependencies": [
+        "framer-motion",
+        "lucide-react",
+        "clsx",
+        "tailwind-merge"
+      ],
+      "registryDependencies": [],
+      "files": [
+        "component.tsx"
+      ],
+      "sourceUrl": "https://raw.githubusercontent.com/charanbalaji2005/Frosted-UI-Components/main/registry/navbar/component.tsx",
+      "docsUrl": "https://frosted-ui.dev/docs/navbar"
+    },
+    {
       "name": "pebble-bar",
       "version": "1.0.0",
       "dependencies": [
@@ -299,6 +460,21 @@
       "docsUrl": "https://frosted-ui.dev/docs/pill-bar"
     },
     {
+      "name": "pricing",
+      "dependencies": [
+        "framer-motion",
+        "lucide-react",
+        "clsx",
+        "tailwind-merge"
+      ],
+      "registryDependencies": [],
+      "files": [
+        "component.tsx"
+      ],
+      "sourceUrl": "https://raw.githubusercontent.com/charanbalaji2005/Frosted-UI-Components/main/registry/pricing/component.tsx",
+      "docsUrl": "https://frosted-ui.dev/docs/pricing"
+    },
+    {
       "name": "profile-sheet",
       "version": "1.0.0",
       "dependencies": [
@@ -329,6 +505,49 @@
       ],
       "sourceUrl": "https://raw.githubusercontent.com/charanbalaji2005/Frosted-UI-Components/main/registry/ribbon-bar/component.tsx",
       "docsUrl": "https://frosted-ui.dev/docs/ribbon-bar"
+    },
+    {
+      "name": "spotlight",
+      "dependencies": [
+        "framer-motion",
+        "clsx",
+        "tailwind-merge"
+      ],
+      "registryDependencies": [],
+      "files": [
+        "component.tsx"
+      ],
+      "sourceUrl": "https://raw.githubusercontent.com/charanbalaji2005/Frosted-UI-Components/main/registry/spotlight/component.tsx",
+      "docsUrl": "https://frosted-ui.dev/docs/spotlight"
+    },
+    {
+      "name": "tabs",
+      "dependencies": [
+        "framer-motion",
+        "clsx",
+        "tailwind-merge"
+      ],
+      "registryDependencies": [],
+      "files": [
+        "component.tsx"
+      ],
+      "sourceUrl": "https://raw.githubusercontent.com/charanbalaji2005/Frosted-UI-Components/main/registry/tabs/component.tsx",
+      "docsUrl": "https://frosted-ui.dev/docs/tabs"
+    },
+    {
+      "name": "testimonials",
+      "dependencies": [
+        "framer-motion",
+        "lucide-react",
+        "clsx",
+        "tailwind-merge"
+      ],
+      "registryDependencies": [],
+      "files": [
+        "component.tsx"
+      ],
+      "sourceUrl": "https://raw.githubusercontent.com/charanbalaji2005/Frosted-UI-Components/main/registry/testimonials/component.tsx",
+      "docsUrl": "https://frosted-ui.dev/docs/testimonials"
     }
   ]
 }

@@ -1,0 +1,6 @@
+{
+  "name": "accordion",
+  "dependencies": ["framer-motion", "lucide-react", "clsx", "tailwind-merge"],
+  "registryDependencies": [],
+  "files": ["component.tsx"]
+}

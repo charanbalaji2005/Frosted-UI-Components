@@ -1,0 +1,6 @@
+{
+  "name": "card",
+  "dependencies": ["framer-motion", "clsx", "tailwind-merge"],
+  "registryDependencies": [],
+  "files": ["component.tsx"]
+}

@@ -32,7 +32,22 @@ const COMPONENTS = [
   "glass-reasoning-bubble",
   "glass-memory-panel",
   "glass-command-center",
-  "glass-knowledge-graph"
+  "glass-knowledge-graph",
+  "button",
+  "card",
+  "modal",
+  "navbar",
+  "accordion",
+  "tabs",
+  "dialog",
+  "drawer",
+  "command",
+  "spotlight",
+  "pricing",
+  "hero",
+  "testimonials",
+  "dashboard",
+  "forms"
 ] as const;
 
 type ComponentName = typeof COMPONENTS[number];
@@ -276,6 +291,23 @@ function listComponents() {
     "Organic Pebble": ["pebble-bar"],
     "Expandable Sheets": ["expandable-nav-sheet", "command-sheet", "profile-sheet"],
     "Floating Elements": ["app-launcher", "floating-search-orb", "floating-action-button", "floating-command-bar"],
+    "Standard UI Elements": [
+      "button",
+      "card",
+      "modal",
+      "navbar",
+      "accordion",
+      "tabs",
+      "dialog",
+      "drawer",
+      "command",
+      "spotlight",
+      "pricing",
+      "hero",
+      "testimonials",
+      "dashboard",
+      "forms"
+    ],
     "AI Agent Interfaces": [
       "glass-agent-card",
       "glass-thinking-panel",
